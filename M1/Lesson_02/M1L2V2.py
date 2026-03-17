@@ -20,3 +20,5 @@ response = client.responses.create(
 
 # print the response from OpenAI
 print(response.output[0].content[0].text)
+print()   
+print()
