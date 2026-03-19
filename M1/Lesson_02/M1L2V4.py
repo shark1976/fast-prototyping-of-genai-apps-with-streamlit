@@ -17,8 +17,8 @@ def get_response(user_prompt, temperature):
             input=[
                 {"role": "user", "content": user_prompt}  # Prompt
             ],
-            temperature=temperature,  # A bit of creativity
-            max_output_tokens=100  # Limit response length
+            #temperature=temperature,  # A bit of creativity
+            #max_output_tokens=100  # Limit response length
         )
     return response
 
@@ -42,4 +42,4 @@ temperature = st.slider(
 with st.spinner("AI is working..."):
     response = get_response(user_prompt, temperature)
     # print the response from OpenAI
-    st.write(response.output[0].content[0].text)
+    st.write(response.output_text)

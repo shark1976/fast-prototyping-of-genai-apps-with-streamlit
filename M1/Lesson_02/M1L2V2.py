@@ -14,11 +14,11 @@ response = client.responses.create(
     input=[
         {"role": "user", "content": "Explain generative AI in one sentence."}  # Prompt
     ],
-    temperature=0.7,  # A bit of creativity
-    max_output_tokens=100  # Limit response length
+    #temperature=0.7,  # A bit of creativity
+    #max_output_tokens=100  # Limit response length
 )
 
 # print the response from OpenAI
-print(response.output[0].content[0].text)
+print(response.output_text)
 print()   
 print()
